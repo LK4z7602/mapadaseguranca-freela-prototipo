@@ -49,23 +49,21 @@ function CatalogPage() {
   };
 
   return (
-    <section className="container-page py-14 md:py-20">
-      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+    <section className="container-page py-10 md:py-20 xl:max-w-full min-[1660px]:max-w-[75%]!">
+      <div className="flex flex-col gap-6   md:justify-between">
         <div className="max-w-2xl">
           <span className="eyebrow">Catálogo</span>
           <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight md:text-5xl">
-            Treinamentos de NRs Normas Regulamentadoras e Qualificação Profissional
+            Treinamentos de NRs <br /> Normas Regulamentadoras e Qualificação Profissional
           </h1>
           <p className="mt-3 text-muted-foreground">
             Todos os nossos treinamentos seguem as normas nacionais e são válidas em todo território
             brasileiro.
           </p>
         </div>
-      </div>
 
-      <div className="mt-10 grid gap-8 lg:grid-cols-[260px_1fr]">
-        <div>
-          <label className="flex w-full max-w-sm items-center gap-2 rounded-full border border-border bg-white px-4 py-2.5 focus-within:border-primary/50 mb-10">
+        <div className="mt-12 max-h-16">
+          <label className="flex w-full max-w-full md:max-w-sm items-center gap-2 rounded-full border border-border bg-white px-4 py-2.5 focus-within:border-primary/50 mb-10">
             <Search className="h-4 w-4 text-muted-foreground" />
             <input
               value={query}
@@ -74,39 +72,42 @@ function CatalogPage() {
               className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
           </label>
+        </div>
+      </div>
 
-          <aside className="rounded-2xl border border-border bg-white p-5 lg:sticky lg:top-24 lg:self-start">
-            <div className="flex items-center gap-2 border-b border-border pb-3 text-sm font-semibold text-foreground">
-              <Filter className="h-4 w-4 text-primary" /> Filtros
+      <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
+        <aside className="rounded-2xl border border-border bg-white p-5 lg:sticky lg:top-24 lg:self-start">
+          <div className="flex items-center gap-2 border-b border-border pb-3 text-sm font-semibold text-foreground">
+            <Filter className="h-4 w-4 text-primary" /> Filtros
+          </div>
+
+          <div className="mt-4">
+            <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Categoria
             </div>
-
-            <div className="mt-4">
-              <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Categoria
-              </div>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {CATEGORIES.map((c) => {
-                  const active = cats.includes(c);
-                  return (
-                    <button
-                      key={c}
-                      type="button"
-                      onClick={() => toggle(cats, c, setCats)}
-                      className={
-                        "rounded-full border px-2.5 py-1 text-xs transition-colors " +
-                        (active
-                          ? "border-primary bg-primary text-primary-foreground"
-                          : "border-border bg-white text-muted-foreground hover:border-primary/40")
-                      }
-                    >
-                      {c}
-                    </button>
-                  );
-                })}
-              </div>
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {CATEGORIES.map((c) => {
+                const active = cats.includes(c);
+                return (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => toggle(cats, c, setCats)}
+                    className={
+                      "rounded-full border px-2.5 py-1 text-xs transition-colors " +
+                      (active
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-border bg-white text-muted-foreground hover:border-primary/40")
+                    }
+                  >
+                    {c}
+                  </button>
+                );
+              })}
             </div>
+          </div>
 
-            {/* <div className="mt-6">
+          {/* <div className="mt-6">
               <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Modalidade
               </div>
@@ -125,19 +126,18 @@ function CatalogPage() {
               </div>
             </div> */}
 
-            <button
-              type="button"
-              onClick={() => {
-                setCats([]);
-                setMods([]);
-                setQuery("");
-              }}
-              className="mt-6 w-full rounded-full border border-border bg-surface px-3 py-2 text-xs font-medium text-muted-foreground hover:text-foreground"
-            >
-              Limpar filtros
-            </button>
-          </aside>
-        </div>
+          <button
+            type="button"
+            onClick={() => {
+              setCats([]);
+              setMods([]);
+              setQuery("");
+            }}
+            className="mt-6 w-full rounded-full border border-border bg-surface px-3 py-2 text-xs font-medium text-muted-foreground hover:text-foreground"
+          >
+            Limpar filtros
+          </button>
+        </aside>
 
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((t) => (

@@ -2,26 +2,26 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Clock, GraduationCap, MonitorPlay } from "lucide-react";
 import type { Training } from "@/lib/nrs";
 import { NRBadge } from "./NRBadge";
-import  heightWorker  from "../../assets/benzeno.jpg"
+import  Benzeno  from "../../assets/benzeno.jpg"
 
 export function TrainingCard({ training }: { training: Training }) {
   return (
     <Link
       to="/treinamentos/$slug"
       params={{ slug: training.slug }}
-      className="group relative flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/40 hover:shadow-[var(--shadow-card)]"
+      className="group relative flex flex-col justify-between rounded-2xl max-h-150 border border-border bg-card p-5 transition-all hover:border-primary/40 hover:shadow-(--shadow-card) "
     >
       <div>
-        <img src={heightWorker} alt="teste" className="rounded-4xl mb-10" />
+        <img src={Benzeno} alt="teste" className="rounded-sm mb-4" />
       </div>
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-center justify-between">
         <NRBadge number={training.nrNumber} />
         <span className="rounded-full border border-border bg-surface px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
           {training.category}
         </span>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-3">
         <h3 className="text-lg font-semibold leading-snug text-foreground">
           {training.title}
         </h3>
@@ -30,7 +30,7 @@ export function TrainingCard({ training }: { training: Training }) {
         </p>
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
+      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
         <span className="inline-flex items-center gap-1.5">
           <Clock className="h-3.5 w-3.5" /> {training.hours}h
         </span>
