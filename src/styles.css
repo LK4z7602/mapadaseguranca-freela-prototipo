@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+ * Mapa da Segurança — design system
+ *
+ * Palette: clean, light, airy. Base white / off-white, subtle warm greys,
+ * orange (#FF6A1A) reserved for accents only. A discrete safety green shows
+ * up on certification badges. No dark blocks, no dark hero.
+ * Typography: Space Grotesk (display) + Inter (body).
+ * ------------------------------------------------------------------------- */
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-safety: var(--safety);
+  --color-safety-foreground: var(--safety-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --shadow-soft: 0 1px 2px oklch(0.2 0.02 265 / 0.04), 0 8px 24px -12px oklch(0.2 0.02 265 / 0.08);
+  --shadow-card: 0 1px 0 oklch(0.2 0.02 265 / 0.03), 0 12px 32px -18px oklch(0.2 0.02 265 / 0.12);
+  --shadow-glow: 0 20px 60px -30px oklch(0.68 0.19 45 / 0.4);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Neutrals */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.28 0.015 260);
+  --surface: oklch(0.99 0.003 90);        /* #FAFAFA off-white */
+  --surface-muted: oklch(0.968 0.004 260); /* #F4F5F7 section separator */
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.28 0.015 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.28 0.015 260);
+
+  /* Brand color */
+  /* --primary: oklch(0.68 0.19 45); */      /*  #FF6A1A  */
+  --primary: #0F9D58;
+
+  --primary-foreground: oklch(1 0 0);
+
+  /* --primary-soft: oklch(0.965 0.03 60); */   /* subtle orange tint */
+  --primary-soft: #E4F6EC;
+
+  --secondary: oklch(0.968 0.004 260);
+  --secondary-foreground: oklch(0.32 0.015 260);
+
+  --muted: oklch(0.968 0.004 260);
+  --muted-foreground: oklch(0.5 0.012 260);
+
+  /* --accent: oklch(0.965 0.03 60); */
+  --accent: #E4F6EC;
+  --accent-foreground: oklch(0.5 0.14 45);
+
+  --safety: oklch(0.75 0.14 145);         /* discrete safety green */
+  --safety-foreground: oklch(0.32 0.08 145);
+
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.93 0.006 260);
+  --border-strong: oklch(0.88 0.008 260);
+  --input: oklch(0.93 0.006 260);
+  --ring: oklch(0.68 0.19 45);
+
+  --chart-1: oklch(0.68 0.19 45);
+  --chart-2: oklch(0.75 0.14 145);
+  --chart-3: oklch(0.6 0.05 260);
+  --chart-4: oklch(0.828 0.189 84);
+  --chart-5: oklch(0.5 0.02 260);
+
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.28 0.015 260);
+  --sidebar-primary: oklch(0.68 0.19 45);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.968 0.004 260);
+  --sidebar-accent-foreground: oklch(0.28 0.015 260);
+  --sidebar-border: oklch(0.93 0.006 260);
+  --sidebar-ring: oklch(0.68 0.19 45);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 25%, transparent);
+    color: var(--foreground);
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 80rem;
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
