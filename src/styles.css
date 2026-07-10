@@ -60,7 +60,7 @@
   --radius: 0.875rem;
 
   /* Neutrals */
-  --background: oklch(1 0 0);
+  --background: #f8faf9;
   --foreground: oklch(0.28 0.015 260);
   --surface: oklch(0.99 0.003 90);        /* #FAFAFA off-white */
   --surface-muted: oklch(0.968 0.004 260); /* #F4F5F7 section separator */
@@ -71,12 +71,10 @@
   --popover-foreground: oklch(0.28 0.015 260);
 
   /* Brand color */
-  /* --primary: oklch(0.68 0.19 45); */      /*  #FF6A1A  */
   --primary: #0F9D58;
 
   --primary-foreground: oklch(1 0 0);
 
-  /* --primary-soft: oklch(0.965 0.03 60); */   /* subtle orange tint */
   --primary-soft: #E4F6EC;
 
   --secondary: oklch(0.968 0.004 260);
@@ -85,7 +83,6 @@
   --muted: oklch(0.968 0.004 260);
   --muted-foreground: oklch(0.5 0.012 260);
 
-  /* --accent: oklch(0.965 0.03 60); */
   --accent: #E4F6EC;
   --accent-foreground: oklch(0.5 0.14 45);
 
