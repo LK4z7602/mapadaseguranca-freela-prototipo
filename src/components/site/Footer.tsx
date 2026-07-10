@@ -52,7 +52,7 @@ export function Footer() {
 
             <div className="mt-6 space-y-2 text-sm text-muted-foreground">
               <p>Av. Paulista, 1000 · São Paulo/SP</p>
-              <p>+55 (11) 4004-0000 · contato@goodsafety.com.br</p>
+              <p>+55 (11) 4004-0000 · contato@mapadaseguranca.com.br</p>
               <p>Seg. a Sex., 8h às 18h</p>
             </div>
 

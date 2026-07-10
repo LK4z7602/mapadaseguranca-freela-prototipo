@@ -34,7 +34,7 @@ function ContactPage() {
             {[
               { icon: Phone, title: "Telefone", value: "+55 (11) 4004-0000" },
               { icon: MessageCircle, title: "WhatsApp", value: "+55 (11) 99999-0000" },
-              { icon: Mail, title: "E-mail", value: "contato@goodsafety.com.br" },
+              { icon: Mail, title: "E-mail", value: "contato@mapadaseguranca.com.br" },
               { icon: MapPin, title: "Endereço", value: "Av. Paulista, 1000 · São Paulo/SP" },
               { icon: Clock, title: "Atendimento", value: "Segunda a sexta, 8h às 18h" },
             ].map((c) => (
