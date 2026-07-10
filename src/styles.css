@@ -62,7 +62,7 @@
   /* Neutrals */
   --background: #f8faf9;
   --foreground: oklch(0.28 0.015 260);
-  --surface: oklch(0.99 0.003 90);        /* #FAFAFA off-white */
+  --surface: oklch(96.976% 0.00905 162.01);        /*  off-green */
   --surface-muted: oklch(0.968 0.004 260); /* #F4F5F7 section separator */
 
   --card: oklch(1 0 0);
