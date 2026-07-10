@@ -173,7 +173,7 @@ function HomePage() {
       </section>
 
       {/* TRUST STRIP */}
-      <section className="border-y border-border bg-surface">
+      {/* <section className="border-y border-border bg-surface">
         <div className="container-page grid grid-cols-2 gap-8 py-10 md:grid-cols-4">
           {STATS.map((s) => (
             <div key={s.label}>
@@ -186,10 +186,10 @@ function HomePage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* FEATURED TRAININGS */}
-      <section className="container-page py-20 md:py-28">
+      <section className="container-page py-20 md:py-28 border-t-2">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
             <span className="eyebrow">Treinamentos em destaque</span>

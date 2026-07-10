@@ -5,7 +5,6 @@ const COLS = [
   {
     title: "Treinamentos",
     links: [
-      { to: "/treinamentos", label: "Catálogo completo" },
       { to: "/treinamentos", label: "Trabalho em Altura" },
       { to: "/treinamentos", label: "Espaço Confinado" },
       { to: "/treinamentos", label: "NR-10 Elétrica" },
