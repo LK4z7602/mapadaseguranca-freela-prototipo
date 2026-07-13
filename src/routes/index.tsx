@@ -97,10 +97,10 @@ function HomePage() {
               e in company — com certificação digital verificável.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-wrap gap-3 flex-col items-start">
               <Link
                 to="/treinamentos"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-px"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-(--shadow-glow) transition-transform hover:-translate-y-px"
               >
                 Compre seu Treinamento Agora <ArrowRight className="h-4 w-4" />
               </Link>
