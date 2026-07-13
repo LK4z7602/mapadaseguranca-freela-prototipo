@@ -152,7 +152,7 @@ function AboutPage() {
       </section>
 
       <section className="container-page py-20">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { v: "+1.200", l: "empresas atendidas" },
             { v: "+48 mil", l: "certificados emitidos" },
@@ -168,7 +168,7 @@ function AboutPage() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="mt-12 flex flex-wrap items-center gap-3">
           {[
