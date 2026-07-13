@@ -23,7 +23,7 @@ export const Route = createFileRoute("/treinamentos/")({
   component: CatalogPage,
 });
 
-const MODALITIES = ["100% Online EAD", "100% Online EAD", "100% Online EAD"] as const;
+const MODALITIES = ["100% Online EaD", "100% Online EaD", "100% Online EaD"] as const;
 
 function CatalogPage() {
   const [query, setQuery] = useState("");
