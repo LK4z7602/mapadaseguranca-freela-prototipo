@@ -102,7 +102,7 @@ function HomePage() {
                 to="/treinamentos"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-px"
               >
-                Ver treinamentos <ArrowRight className="h-4 w-4" />
+                Compre seu Treinamento Agora <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contato"
