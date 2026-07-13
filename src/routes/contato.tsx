@@ -35,7 +35,7 @@ function ContactPage() {
               { icon: Phone, title: "Telefone", value: "+55 (11) 4004-0000" },
               { icon: MessageCircle, title: "WhatsApp", value: "+55 (11) 99999-0000" },
               { icon: Mail, title: "E-mail", value: "contato@mapadaseguranca.com.br" },
-              { icon: MapPin, title: "Endereço", value: "Av. Paulista, 1000 · São Paulo/SP" },
+              { icon: MapPin, title: "Sede", value: "São Paulo/SP" },
               { icon: Clock, title: "Atendimento", value: "Segunda a sexta, 8h às 18h" },
             ].map((c) => (
               <div key={c.title} className="flex items-start gap-4 rounded-2xl border border-border bg-white p-4">
@@ -54,7 +54,7 @@ function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+          {/* <div className="mt-8 overflow-hidden rounded-2xl border border-border">
             <div className="relative h-56 bg-surface-muted">
               <div
                 aria-hidden
@@ -72,7 +72,7 @@ function ContactPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div>  */} {/* Pode ser alterado posteriormente */}
         </div>
 
         <form
