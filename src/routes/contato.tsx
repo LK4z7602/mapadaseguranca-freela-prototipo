@@ -76,7 +76,7 @@ function ContactPage() {
         </div>
 
         <form
-          className="rounded-3xl border border-border bg-white p-8 shadow-[var(--shadow-card)]"
+          className="rounded-3xl border border-border bg-white p-8 shadow-(--shadow-card)"
           onSubmit={(e) => e.preventDefault()}
         >
           <h2 className="font-display text-2xl font-semibold">Envie sua mensagem</h2>
@@ -116,7 +116,7 @@ function ContactPage() {
 
           <button
             type="submit"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)]"
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-(--shadow-glow)"
           >
             Enviar mensagem <Send className="h-4 w-4" />
           </button>
