@@ -2,9 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   Award,
+  Building2,
   CalendarCheck,
   CheckCircle2,
   ClipboardList,
+  Factory,
+  FactoryIcon,
   FileBadge,
   MessageSquareText,
   ShieldCheck,
@@ -92,9 +95,9 @@ function HomePage() {
               <span className="text-primary"> com o profissionalismo que ela merece.</span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Capacitação técnica em Normas Regulamentadoras para operações
-              industriais, construção civil, energia e logística. Presencial, EAD
-              e in company — com certificação digital verificável.
+              Capacitação técnica em Normas Regulamentadoras para operações industriais, construção
+              civil, energia e logística. Presencial, EAD e in company — com certificação digital
+              verificável.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 flex-col items-start">
@@ -103,6 +106,12 @@ function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-(--shadow-glow) transition-transform hover:-translate-y-px"
               >
                 Compre seu Treinamento Agora <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/contato"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-6 py-3 text-sm font-semibold text-foreground hover:border-primary/40"
+              >
+                <Building2 className="h-4 w-4" /> Atendimento para Empresas
               </Link>
               <Link
                 to="/contato"
@@ -197,8 +206,8 @@ function HomePage() {
               Os cursos que a maior parte das empresas contrata primeiro.
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Todos aderentes às Normas Regulamentadoras vigentes e ministrados
-              por instrutores com registro no MTE.
+              Todos aderentes às Normas Regulamentadoras vigentes e ministrados por instrutores com
+              registro no MTE.
             </p>
           </div>
           <Link
@@ -229,10 +238,7 @@ function HomePage() {
 
           <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((s, i) => (
-              <li
-                key={s.title}
-                className="relative rounded-2xl border border-border bg-white p-6"
-              >
+              <li key={s.title} className="relative rounded-2xl border border-border bg-white p-6">
                 <div className="flex items-center justify-between">
                   <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary-soft text-primary">
                     <s.icon className="h-5 w-5" strokeWidth={1.75} />
@@ -244,9 +250,7 @@ function HomePage() {
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">
                   {s.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {s.text}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
               </li>
             ))}
           </ol>
@@ -320,8 +324,8 @@ function HomePage() {
                 Monte um programa de NRs sob medida para a sua operação.
               </h2>
               <p className="mt-3 max-w-xl text-muted-foreground">
-                Consultoria + treinamentos + reciclagens em um único plano. Fale
-                com um especialista e receba uma proposta em até 24 horas.
+                Consultoria + treinamentos + reciclagens em um único plano. Fale com um especialista
+                e receba uma proposta em até 24 horas.
               </p>
             </div>
             <div className="flex flex-col gap-3 md:items-end">
