@@ -8,7 +8,7 @@ const NAV = [
   { to: "/treinamentos", label: "Treinamentos" },
   { to: "/sobre", label: "Sobre" },
   { to: "/faq", label: "FAQ" },
-  { to: "/contato", label: "Contato" },
+  { to: "/contato", label: "Atendimento PJ" },
 ] as const;
 
 export function Header() {
