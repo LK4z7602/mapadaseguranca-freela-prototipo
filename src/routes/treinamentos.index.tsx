@@ -50,7 +50,7 @@ function CatalogPage() {
 
   return (
     <section className="container-page py-10 md:py-20 xl:max-w-full min-[1660px]:max-w-[75%]!">
-      <div className="flex flex-col gap-6   md:justify-between">
+      <div className="flex flex-col gap-6 md:justify-between">
         <div className="max-w-2xl">
           <span className="eyebrow">Catálogo</span>
           <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight md:text-5xl">

@@ -6,8 +6,6 @@ import {
   CalendarCheck,
   CheckCircle2,
   ClipboardList,
-  Factory,
-  FactoryIcon,
   FileBadge,
   MessageSquareText,
   ShieldCheck,
